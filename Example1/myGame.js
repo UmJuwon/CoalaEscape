@@ -31,6 +31,17 @@ room.keypad.onClick = function() {
 	 })
 }
 
+room.shelf = room.createObject("shelf", "선반-좌.png")
+room.shelf.setWidth(460)
+room.locateObject(room.shelf, 250, 150)
+
+room.book = room.createObject("book", "책3-1.png")
+room.book.setWidth(80)
+room.locateObject(room.book, 100, 140)
+room.book.onClick = function() {
+	showImageViewer("종이.png", "책.txt"); // 이미지 출력
+}
+
 game.start(room) // 게임시작
 
-printMessage("셜록홈즈의 밀실탈출을 시작합니다.") // 환영메시지출력
+printMessage("셜록 홈즈의 밀실 탈출을 시작합니다") // 환영메시지출력
